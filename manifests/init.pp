@@ -67,6 +67,15 @@ class mcollective(
   $stomp_port           = '61613',
   $mc_security_provider = $mcollective::params::mc_security_provider,
   $mc_security_psk      = $mcollective::params::mc_security_psk,
+  $mc_plugin_aes_serializer = $mcollective::params::mc_plugin_aes_serializer,
+  $mc_plugin_aes_send_pubkey = $mcollective::params::mc_plugin_aes_send_pubkey,
+  $mc_plugin_aes_learn_pubkeys = $mcollective::params::mc_plugin_aes_learn_pubkeys,
+  $mc_plugin_aes_client_private = $mcollective::params::mc_plugin_aes_client_private,
+  $mc_plugin_aes_client_public = $mcollective::params::mc_plugin_aes_client_public,
+  $mc_plugin_aes_client_cert_dir = $mcollective::params::mc_plugin_aes_client_cert_dir,
+  $mc_plugin_aes_server_private = $mcollective::params::mc_plugin_aes_server_private,
+  $mc_plugin_aes_server_public = $mcollective::params::mc_plugin_aes_server_public,
+  $mc_plugin_aes_enforce_ttl = $mcollective::params::mc_plugin_aes_enforce_ttl, 
   $fact_source          = 'facter',
   $yaml_facter_source   = '/etc/mcollective/facts.yaml'
 ) inherits mcollective::params {

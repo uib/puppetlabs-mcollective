@@ -22,6 +22,18 @@ class mcollective::params {
   $mc_security_provider = 'psk'
   $mc_security_psk      = 'changemeplease'
 
+  $mc_plugin_aes_serializer = 'yaml'
+  $mc_plugin_aes_send_pubkey = '0'
+  $mc_plugin_aes_learn_pubkeys = '0'
+
+  $mc_plugin_aes_client_private = '/home/user/.mcollective.d/user-private.pem'
+  $mc_plugin_aes_client_public = '/home/user/.mcollective.d/user.pem'
+
+  $mc_plugin_aes_client_cert_dir = '/etc/mcollective/ssl/clients'
+  $mc_plugin_aes_server_private = '/etc/mcollective/ssl/server-private.pem'
+  $mc_plugin_aes_server_public = '/etc/mcollective/ssl/server-public.pem'
+  $mc_plugin_aes_enforce_ttl = '1'
+
   $nrpe_dir_real = $operatingsystem ? {
     /(?i-mx:centos|fedora|redhat|oel)/ => '/etc/nrpe.d',
     default                            => '/etc/nagios/nrpe.d',
@@ -67,7 +79,7 @@ class mcollective::params {
   $stomp_user    = 'mcollective'
   $stomp_passwd  = 'marionette'
   $stomp_server  = 'stomp'
-  $stomp_port    = '6163'
+  $stomp_port    = '6161'
 
   $pkg_state = 'present'
 

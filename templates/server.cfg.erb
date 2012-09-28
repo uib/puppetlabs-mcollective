@@ -9,6 +9,15 @@ daemonize   = <%= mc_daemonize %>
 securityprovider = <%= mc_security_provider_real %>
 plugin.psk       = <%= mc_security_psk_real %>
 
+# AES Security Plugin
+plugin.aes.serializer = <%= mc_plugin_aes_serializer %>
+plugin.aes.send_pubkey = <%= mc_plugin_aes_send_pubkey %>
+plugin.aes.learn_pubkeys = <%= mc_plugin_aes_learn_pubkeys %>
+plugin.aes.client_cert_dir = <%= mc_plugin_aes_client_cert_dir %>
+plugin.aes.server_private = <%= mc_plugin_aes_server_private %>
+plugin.aes.server_public = <%= mc_plugin_aes_server_public %>
+plugin.aes.enforce_ttl = <%= mc_plugin_aes_enforce_ttl %> 
+
 # Registration
 registerinterval = 300
 registration = Meta
